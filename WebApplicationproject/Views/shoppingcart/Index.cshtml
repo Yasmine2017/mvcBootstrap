@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+
+}
+
+<h2>Index</h2>
+
+@using WebApplicationproject.Models;
+<p>
+    @using (Html.BeginForm())
+    {
+        @Html.TextBox("search")<input type="submit" value="search" />
+    }
+</p>
+<p>
+    @Html.ActionLink("Register", "Register", "shoppingcart") &nbsp;
+    @Html.ActionLink("Login", "Login","shoppingcart")
+</p>
+
+
+@foreach (product item in ViewBag.listproducts)
+{
+    <div class="row">
+        <div class="col-sm-10">
+            <div class="panel panel-danger">
+                <div class="panel-heading">@item.category.categoryname &nbsp; @item.name</div>
+                
+                <img src="@item.image" style="width:100px;height:100px" />
+                <div class="panel-footer">
+                    @item.descripe &nbsp;  &nbsp; @item.price
+                    &nbsp;&nbsp;
+                    @Html.ActionLink("Details", "Details","shoppingcart", new { id = item.productID }) |
+
+                    @Html.ActionLink("Order Now", "ordernow", "shoppingcart", new { id = item.productID }, null)|
+                </div>
+            </div>
+            </div>
+    </div>
+}
+

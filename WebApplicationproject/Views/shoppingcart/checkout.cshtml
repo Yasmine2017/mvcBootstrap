@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "checkout";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+
+}
+
+<h2>checkout</h2>
+
+<fieldset>
+    <legend>customer information</legend>
+    @using (Html.BeginForm("saveorder", "shoppingcart", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td>customer name</td>
+                <td><input type="text" name="customer name" /></td>
+            </tr>
+            <tr>
+                <td>customer address</td>
+                <td><input type="text" name="customer address" /></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="submit" /></td>
+            </tr>
+        </table>
+    }
+</fieldset>

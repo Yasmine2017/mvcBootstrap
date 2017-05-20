@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "LoggedIn";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>LoggedIn</h2>
+
+@if (Session["userid"] != null)
+{
+    <h4>Hello @Session["username"].ToString()</h4>
+}
+
+@Html.ActionLink("Index","Index","shoppingcart")

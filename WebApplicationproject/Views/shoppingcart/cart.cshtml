@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "cart";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+
+}
+
+<h2>cart</h2>
+
+@using WebApplicationproject.Controllers;
+
+
+@{decimal s = 0; }
+
+
+@foreach(items item in (List<items>)Session["cart"])
+{
+    s = s + item.Product.price * item.Quantity;
+
+    <div class="row">
+        <div class="col-sm-10">
+            <div class="panel panel-danger">
+                <div class="panel-heading"> &nbsp; item.Product.name</div>
+
+                <img src="@item.Product.image" style="width:50px;height:50px" />
+                &nbsp;&nbsp;
+            </div>
+            @item.Product.price &nbsp; @item.Quantity&nbsp;&nbsp;
+         @(item.Product.price * item.Quantity)&nbsp;&nbsp;
+            @Html.ActionLink("Delete", "Delete", "shoppingcart", new { id = item.Product.productID }, null)
+            &nbsp; &nbsp;
+    </div>
+        </div>
+}
+<br /><br />
+
+
+            sum &nbsp; @s<br /><br />
+            @Html.ActionLink("Continue shopping", "Index", "shoppingcart") |
+            @Html.ActionLink("checkout", "checkout", "shoppingcart") |

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bfb2873d947d4747ab5692d25f7f2e5c" Name="Diagram1">
+        <EntityTypeShape EntityType="shoppingcartModel.category" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="shoppingcartModel.invoice" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="shoppingcartModel.invoicedetails" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="shoppingcartModel.product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="shoppingcartModel.FK__product__categor__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="shoppingcartModel.FK__invoicede__invoi__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="shoppingcartModel.FK__invoicede__produ__38996AB5" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="shoppingcartModel.UserAcount" Width="1.5" PointX="5.375" PointY="4.75" />
+        <EntityTypeShape EntityType="shoppingcartModel.wish" Width="1.5" PointX="7.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
